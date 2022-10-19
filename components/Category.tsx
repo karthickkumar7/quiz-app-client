@@ -6,7 +6,7 @@ const Category: FC<Category> = (props) => {
     const { push } = useRouter();
 
     return (
-        <section className="min-w-[300px] min-h-[200px] p-4 rounded border border-blue-100 bg-blue-100 hover:border-blue-600">
+        <section className="min-w-[300px] min-h-[200px] p-4 rounded border border-blue-100 text-blue-800 bg-blue-100 hover:border-blue-600">
             <h1 className="text-xl mb-2 font-semibold uppercase">
                 {props.title}
             </h1>

@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { india, javascript, python, react } from '../../quizdata/data';
+import { india, javascript, python, react, dsa } from '../../quizdata/data';
 import { QuizState } from '../../types/type';
 
 const initialState: QuizState = {
+    allQuestions: [],
     currentQuestion: { id: '1', choices: [], title: '' },
+    currentQuestionNumber: 1,
     remainingQuestions: [],
     wronglyAnswered: [],
     gameover: false,
-    currentMoneyIndex: 0,
-    currentMoney: 0,
 };
 
 const quizSlice = createSlice({
@@ -17,25 +17,28 @@ const quizSlice = createSlice({
     initialState,
 
     reducers: {
-        setGameover: (state, { payload }) => {},
-
-        setCurrentMoneyIndex: (state, { payload }) => {},
-
-        setCurrentMoney: (state, { payload }) => {},
-
         setQuiz: (state, { payload }) => {
             switch (payload) {
                 case 'india':
                     state.remainingQuestions = india;
+                    state.allQuestions = india;
                     return;
                 case 'javascript':
                     state.remainingQuestions = javascript;
+                    state.allQuestions = javascript;
                     return;
                 case 'python':
                     state.remainingQuestions = python;
+                    state.allQuestions = python;
                     return;
                 case 'react':
                     state.remainingQuestions = react;
+                    state.allQuestions = react;
+                    return;
+                // TODO change
+                case 'datastructures-and-algorithms':
+                    state.remainingQuestions = dsa;
+                    state.allQuestions = dsa;
                     return;
             }
         },
@@ -54,7 +57,10 @@ const quizSlice = createSlice({
             if (payload?.correct) {
                 // inc mark here
             } else {
-                state.wronglyAnswered.push(state.currentQuestion);
+                state.wronglyAnswered.push({
+                    ...state.currentQuestion,
+                    userAnswer: payload.choice,
+                });
             }
             // send question
             const randomIndex = Math.floor(
@@ -65,6 +71,9 @@ const quizSlice = createSlice({
                 (qns, i: number) => i !== randomIndex
             );
 
+            //inc qn number
+            state.currentQuestionNumber++;
+
             if (state.remainingQuestions.length === 0) {
                 state.gameover = true;
                 return;
@@ -72,23 +81,17 @@ const quizSlice = createSlice({
         },
 
         resetState: (state) => {
+            state.allQuestions = [];
             state.currentQuestion = { id: '1', choices: [], title: '' };
             state.remainingQuestions = [];
+            state.currentQuestionNumber = 1;
             state.gameover = false;
-            state.currentMoneyIndex = 0;
-            state.currentMoney = 0;
+            state.wronglyAnswered = [];
         },
     },
 });
 
-export const {
-    sendQuestion,
-    setCurrentMoney,
-    setCurrentMoneyIndex,
-    setGameover,
-    checkForCorrectAnswer,
-    setQuiz,
-    resetState,
-} = quizSlice.actions;
+export const { sendQuestion, checkForCorrectAnswer, setQuiz, resetState } =
+    quizSlice.actions;
 
 export default quizSlice.reducer;

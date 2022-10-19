@@ -558,3 +558,133 @@ export const react: Question[] = [
         ],
     },
 ];
+
+export const dsa: Question[] = [
+    {
+        id: '1',
+        title: 'Which of the following usees FIFO method',
+        choices: [
+            { choice: 'queue', correct: true },
+            { choice: 'stack', correct: false },
+            { choice: 'hash table', correct: false },
+            { choice: 'binary search tree', correct: false },
+        ],
+    },
+    {
+        id: '2',
+        title: 'Postfix expression is just a reverse of prefix expression.',
+        choices: [
+            { choice: 'true', correct: false },
+            { choice: 'false', correct: true },
+        ],
+    },
+    {
+        id: '3',
+        title: 'Quick sort algorithm is an example of',
+        choices: [
+            { choice: 'Greedy approach', correct: false },
+            { choice: 'Improved binary search', correct: false },
+            { choice: 'Dynamic Programming', correct: false },
+            { choice: 'Divide and conquer', correct: true },
+        ],
+    },
+    {
+        id: '4',
+        title: 'The minimum number of edges required to create a cyclid graph of n vertices is',
+        choices: [
+            { choice: 'n', correct: true },
+            { choice: 'n-1', correct: false },
+            { choice: 'n+1', correct: false },
+            { choice: '2n', correct: false },
+        ],
+    },
+    {
+        id: '5',
+        title: 'Time complexity of Depth First Traversal of is',
+        choices: [
+            { choice: 'Θ(|V|+|E|)', correct: true },
+            { choice: 'Θ(|V|)', correct: false },
+            { choice: 'Θ(|E|)', correct: false },
+            { choice: 'Θ(|V|*|E|)', correct: false },
+        ],
+    },
+    {
+        id: '6',
+        title: 'which BigO-notation condition is true',
+        choices: [
+            { choice: 'O(n) > O(1)', correct: false },
+            { choice: 'O(n^2) < O(nlogn)', correct: false },
+            { choice: 'O(1) > O(n)', correct: true },
+            { choice: 'O(n^2) = O(logn)', correct: false },
+        ],
+    },
+    {
+        id: '7',
+        title: 'Index of arrays in C programming langauge starts from',
+        choices: [
+            { choice: 'undefined', correct: false },
+            { choice: '1', correct: false },
+            { choice: 'either 1 or 0', correct: false },
+            { choice: '0', correct: true },
+        ],
+    },
+    {
+        id: '8',
+        title: 'Which of these bodies of water does not border India?',
+        choices: [
+            { choice: 'red sea', correct: true },
+            { choice: 'indian ocean', correct: false },
+            { choice: 'bay of bengal', correct: false },
+            { choice: 'arabian sea', correct: false },
+        ],
+    },
+    {
+        id: '9',
+        title: 'Program with highest run-time complexity is',
+        choices: [
+            { choice: 'Fibonacci Series', correct: false },
+            { choice: 'Prime Number Series', correct: false },
+            { choice: 'Tower of Hanoi', correct: true },
+            { choice: 'None of the above', correct: false },
+        ],
+    },
+    {
+        id: '10',
+        title: 'Shell sort uses',
+        choices: [
+            { choice: 'merge sort', correct: false },
+            { choice: 'insertion sort', correct: true },
+            { choice: 'quick sort', correct: false },
+            { choice: 'selection sort', correct: false },
+        ],
+    },
+    {
+        id: '11',
+        title: 'Apriori analysis of an algorithm assumes that −',
+        choices: [
+            { choice: 'andaman sea', correct: false },
+            { choice: 'arabian sea', correct: true },
+            { choice: 'celebes sea', correct: false },
+            { choice: 'coral sea', correct: false },
+        ],
+    },
+    {
+        id: '12',
+        title: 'Apriori analysis of an algorithm assumes that −',
+        choices: [
+            {
+                choice: 'the algorithm has been tested before in real environment.',
+                correct: false,
+            },
+            {
+                choice: 'the algorithm needs not to be practical.',
+                correct: true,
+            },
+            {
+                choice: 'all other factors like CPU speed are constant and have no effect on implementation.',
+                correct: false,
+            },
+            { choice: 'none of the above.', correct: false },
+        ],
+    },
+];

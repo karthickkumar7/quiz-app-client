@@ -19,6 +19,6 @@ export const categories: Category[] = [
     },
     {
         id: '5',
-        title: 'test',
+        title: 'datastructures-and-algorithms',
     },
 ];

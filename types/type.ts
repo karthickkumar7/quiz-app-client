@@ -3,6 +3,12 @@ export interface Question {
     title: string;
     choices: Choice[];
 }
+export interface WrongQuestion {
+    id: string;
+    title: string;
+    choices: Choice[];
+    userAnswer: string;
+}
 
 export interface Choice {
     choice: string;
@@ -20,10 +26,10 @@ export interface Category {
 }
 
 export interface QuizState {
+    allQuestions: Question[];
     currentQuestion: Question;
+    currentQuestionNumber: number;
     remainingQuestions: Question[];
-    wronglyAnswered: Question[];
+    wronglyAnswered: WrongQuestion[];
     gameover: boolean;
-    currentMoneyIndex: number;
-    currentMoney: number;
 }
