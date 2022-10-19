@@ -431,7 +431,7 @@ export const react: Question[] = [
         choices: [
             { choice: 'Inside js/components/', correct: true },
             { choice: 'Inside vendor/components/', correct: false },
-            { choice: 'Inside vendor/components/', correct: false },
+            { choice: 'Inside js/vendor/', correct: false },
             { choice: 'Inside vendor/', correct: false },
         ],
     },

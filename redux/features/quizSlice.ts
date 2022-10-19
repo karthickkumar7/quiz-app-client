@@ -3,8 +3,9 @@ import { india, javascript, python, react } from '../../quizdata/data';
 import { QuizState } from '../../types/type';
 
 const initialState: QuizState = {
-    currentQuestion: {},
+    currentQuestion: { id: '1', choices: [], title: '' },
     remainingQuestions: [],
+    wronglyAnswered: [],
     gameover: false,
     currentMoneyIndex: 0,
     currentMoney: 0,
@@ -50,24 +51,28 @@ const quizSlice = createSlice({
         },
 
         checkForCorrectAnswer: (state, { payload }: any) => {
-            if (state.gameover) return;
-            console.log(state);
             if (payload?.correct) {
-                // send question
-                const randomIndex = Math.floor(
-                    Math.random() * state.remainingQuestions.length
-                );
-                state.currentQuestion = state.remainingQuestions[randomIndex];
-                state.remainingQuestions = state.remainingQuestions.filter(
-                    (qns, i: number) => i !== randomIndex
-                );
+                // inc mark here
             } else {
+                state.wronglyAnswered.push(state.currentQuestion);
+            }
+            // send question
+            const randomIndex = Math.floor(
+                Math.random() * state.remainingQuestions.length
+            );
+            state.currentQuestion = state.remainingQuestions[randomIndex];
+            state.remainingQuestions = state.remainingQuestions.filter(
+                (qns, i: number) => i !== randomIndex
+            );
+
+            if (state.remainingQuestions.length === 0) {
                 state.gameover = true;
+                return;
             }
         },
 
         resetState: (state) => {
-            state.currentQuestion = {};
+            state.currentQuestion = { id: '1', choices: [], title: '' };
             state.remainingQuestions = [];
             state.gameover = false;
             state.currentMoneyIndex = 0;

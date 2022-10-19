@@ -20,8 +20,9 @@ export interface Category {
 }
 
 export interface QuizState {
-    currentQuestion: Question | {};
+    currentQuestion: Question;
     remainingQuestions: Question[];
+    wronglyAnswered: Question[];
     gameover: boolean;
     currentMoneyIndex: number;
     currentMoney: number;
