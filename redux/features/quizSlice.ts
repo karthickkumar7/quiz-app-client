@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { india, javascript } from '../../quizdata/data';
+import { india, javascript, python, react } from '../../quizdata/data';
 import { QuizState } from '../../types/type';
 
 const initialState: QuizState = {
@@ -30,6 +30,12 @@ const quizSlice = createSlice({
                 case 'javascript':
                     state.remainingQuestions = javascript;
                     return;
+                case 'python':
+                    state.remainingQuestions = python;
+                    return;
+                case 'react':
+                    state.remainingQuestions = react;
+                    return;
             }
         },
 
@@ -59,6 +65,14 @@ const quizSlice = createSlice({
                 state.gameover = true;
             }
         },
+
+        resetState: (state) => {
+            state.currentQuestion = {};
+            state.remainingQuestions = [];
+            state.gameover = false;
+            state.currentMoneyIndex = 0;
+            state.currentMoney = 0;
+        },
     },
 });
 
@@ -69,6 +83,7 @@ export const {
     setGameover,
     checkForCorrectAnswer,
     setQuiz,
+    resetState,
 } = quizSlice.actions;
 
 export default quizSlice.reducer;

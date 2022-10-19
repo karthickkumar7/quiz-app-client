@@ -264,3 +264,297 @@ export const javascript: Question[] = [
         ],
     },
 ];
+
+export const python: Question[] = [
+    {
+        id: '1',
+        title: 'Which type of Programming does Python support?',
+        choices: [
+            { choice: 'object-oriented programming', correct: false },
+            { choice: 'structured programming', correct: false },
+            { choice: 'functional programming', correct: false },
+            { choice: 'all of the mentioned', correct: true },
+        ],
+    },
+    {
+        id: '2',
+        title: 'Is Python case sensitive when dealing with identifiers?',
+        choices: [
+            { choice: 'no', correct: true },
+            { choice: 'yes', correct: false },
+            { choice: 'machine dependent', correct: false },
+            { choice: 'none of the mentioned', correct: false },
+        ],
+    },
+    {
+        id: '3',
+        title: 'All keywords in Python are in _________',
+        choices: [
+            { choice: 'Capitalized', correct: false },
+            { choice: 'lower case', correct: false },
+            { choice: 'UPPER CASE', correct: false },
+            { choice: 'None of the mentioned', correct: true },
+        ],
+    },
+    {
+        id: '4',
+        title: 'Which of the following is used to define a block of code in Python language?',
+        choices: [
+            { choice: 'Indentation', correct: true },
+            { choice: 'Key', correct: false },
+            { choice: 'Brackets', correct: false },
+            { choice: 'All of the mentioned', correct: false },
+        ],
+    },
+    {
+        id: '5',
+        title: 'Which keyword is used for function in Python language?',
+        choices: [
+            { choice: 'function', correct: false },
+            { choice: 'def', correct: true },
+            { choice: 'fun', correct: false },
+            { choice: 'define', correct: false },
+        ],
+    },
+    {
+        id: '6',
+        title: 'Which of the following character is used to give single-line comments in Python?',
+        choices: [
+            { choice: '//', correct: false },
+            { choice: '#', correct: true },
+            { choice: '/*', correct: false },
+            { choice: '<--', correct: false },
+        ],
+    },
+    {
+        id: '7',
+        title: `
+            i = 1
+            while True:
+                if i%3 == 0:
+                    break
+                print(i)
+            
+                i + = 1
+        `,
+        choices: [
+            { choice: '1 2 3', correct: false },
+            { choice: 'error', correct: true },
+            { choice: '1 2', correct: false },
+            { choice: 'none of the mentioned', correct: false },
+        ],
+    },
+    {
+        id: '8',
+        title: 'Which of the following functions can help us to find the version of python that we are currently working on?',
+        choices: [
+            { choice: 'sys.version(1)', correct: true },
+            { choice: 'sys.version(0)', correct: false },
+            { choice: 'sys.version()', correct: false },
+            { choice: 'sys.version', correct: false },
+        ],
+    },
+    {
+        id: '9',
+        title: 'Python supports the creation of anonymous functions at runtime, using a construct called __________',
+        choices: [
+            { choice: 'pi', correct: false },
+            { choice: 'anonymous', correct: false },
+            { choice: 'lambda', correct: true },
+            { choice: 'none of the mentioned', correct: false },
+        ],
+    },
+    {
+        id: '10',
+        title: 'Which of the following is the truncation division operator in Python?',
+        choices: [
+            { choice: '|', correct: false },
+            { choice: '//', correct: true },
+            { choice: '/', correct: false },
+            { choice: '%', correct: false },
+        ],
+    },
+    {
+        id: '11',
+        title: 'What is the order of precedence in python?',
+        choices: [
+            {
+                choice: 'Exponential, Parentheses, Multiplication, Division, Addition, Subtraction',
+                correct: false,
+            },
+            {
+                choice: 'Exponential, Parentheses, Division, Multiplication, Addition, Subtraction',
+                correct: false,
+            },
+            {
+                choice: 'Parentheses, Exponential, Multiplication, Division, Subtraction, Addition',
+                correct: false,
+            },
+            {
+                choice: 'Parentheses, Exponential, Multiplication, Division, Addition, Subtraction',
+                correct: true,
+            },
+        ],
+    },
+    {
+        id: '12',
+        title: 'Which of the following is true for variable names in Python?',
+        choices: [
+            {
+                choice: 'underscore and ampersand are the only two special characters allowed',
+                correct: false,
+            },
+            { choice: 'unlimited length', correct: true },
+            {
+                choice: 'all private members must have leading and trailing underscores',
+                correct: false,
+            },
+            { choice: 'none of the mentioned', correct: false },
+        ],
+    },
+];
+
+export const react: Question[] = [
+    {
+        id: '1',
+        title: 'Everything in React is a _____________',
+        choices: [
+            { choice: 'module', correct: false },
+            { choice: 'component', correct: true },
+            { choice: 'package', correct: false },
+            { choice: 'class', correct: false },
+        ],
+    },
+    {
+        id: '2',
+        title: 'In which directory React Components are saved?',
+        choices: [
+            { choice: 'Inside js/components/', correct: true },
+            { choice: 'Inside vendor/components/', correct: false },
+            { choice: 'Inside vendor/components/', correct: false },
+            { choice: 'Inside vendor/', correct: false },
+        ],
+    },
+    {
+        id: '3',
+        title: 'What is Babel?',
+        choices: [
+            { choice: 'A transpiler', correct: false },
+            { choice: 'An interpreter', correct: false },
+            { choice: 'A Compiler', correct: false },
+            { choice: 'Both Compiler and Transpilar', correct: true },
+        ],
+    },
+    {
+        id: '4',
+        title: 'What is ReactJS?',
+        choices: [
+            { choice: 'Server-side Framework', correct: false },
+            { choice: 'User-interface framework', correct: false },
+            {
+                choice: 'A Library for building interactive interfaces',
+                correct: true,
+            },
+            { choice: 'None of the Above', correct: false },
+        ],
+    },
+    {
+        id: '5',
+        title: 'Props are __________ into other components',
+        choices: [
+            { choice: 'Injected', correct: false },
+            { choice: 'Methods', correct: true },
+            { choice: 'Both A and B', correct: false },
+            { choice: 'All of these', correct: false },
+        ],
+    },
+    {
+        id: '6',
+        title: 'Which of the following API is a MUST for every ReactJS component?',
+        choices: [
+            { choice: 'getInitialState', correct: false },
+            { choice: 'render', correct: false },
+            { choice: 'renderComponent', correct: true },
+            { choice: 'None of the Above', correct: false },
+        ],
+    },
+    {
+        id: '7',
+        title: 'In React what is used to pass data to a component from outside?',
+        choices: [
+            { choice: 'setState', correct: false },
+            { choice: 'props', correct: true },
+            { choice: 'PropsTypes', correct: false },
+            { choice: 'render with arguments', correct: false },
+        ],
+    },
+    {
+        id: '8',
+        title: 'ReactJS uses _____ to increase performance',
+        choices: [
+            { choice: 'Virtual DOM', correct: true },
+            { choice: 'Original DOM', correct: false },
+            { choice: 'Both 1 & 2', correct: false },
+            { choice: 'None of the above', correct: false },
+        ],
+    },
+    {
+        id: '9',
+        title: 'Keys are given to a list of elements in react. These keys should be -',
+        choices: [
+            { choice: 'Unique in the DOM', correct: false },
+            { choice: 'Do not requires to be unique', correct: false },
+            { choice: 'Unique among the siblings only', correct: true },
+            { choice: 'All of the above', correct: false },
+        ],
+    },
+    {
+        id: '10',
+        title: 'If a function component should always render the same way given the same props, what is a simple performance optimization available for it?',
+        choices: [
+            {
+                choice: 'Wrap it in the React.memo higher-order component',
+                correct: true,
+            },
+            { choice: 'Implement the useReducer Hook', correct: false },
+            {
+                choice: 'Implement the shouldComponentUpdate lifecycle method',
+                correct: false,
+            },
+            { choice: 'Implement the useMemo Hook', correct: false },
+        ],
+    },
+    {
+        id: '11',
+        title: `
+            How do you fix the syntax error that results from running this code?
+
+            const person =(firstName, lastName) =>
+            {
+                first: firstName,
+                last: lastName
+            }
+            console.log(person("Light", "Yagami"))
+
+        `,
+        choices: [
+            { choice: 'Wrap the object in parentheses', correct: true },
+            { choice: 'Call the function from another file', correct: false },
+            { choice: 'Replace the with an array', correct: false },
+            {
+                choice: 'Add a return statement before the first curly brace',
+                correct: false,
+            },
+        ],
+    },
+    {
+        id: '12',
+        title: 'How do you access a function fetch() from a h1 element in JSX?',
+        choices: [
+            { choice: '<h1>{fetch()}</h1>', correct: true },
+            { choice: '<h1>${fetch()}</h1>', correct: false },
+            { choice: '<h1>{fetch}</h1>', correct: false },
+            { choice: '<h1>${fetch}</h1>', correct: false },
+        ],
+    },
+];
