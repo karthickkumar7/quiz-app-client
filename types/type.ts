@@ -23,6 +23,7 @@ export interface Money {
 export interface Category {
     id: string;
     title: string;
+    desc: string;
 }
 
 export interface QuizState {

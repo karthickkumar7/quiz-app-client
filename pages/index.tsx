@@ -13,7 +13,7 @@ const Home = () => {
         <div className="container mx-auto w-full h-full p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {categories.map((cat) => (
                 <div key={cat.id}>
-                    <Category id="" title={cat.title} />
+                    <Category id="" title={cat.title} desc={cat.desc} />
                 </div>
             ))}
         </div>

@@ -10,11 +10,7 @@ const Category: FC<Category> = (props) => {
             <h1 className="text-xl mb-2 font-semibold uppercase">
                 {props.title}
             </h1>
-            <p className="mb-2 text-slate-900">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem
-                praesentium reiciendis doloremque. praesentium reiciendis
-                doloremque. praesentium reiciendis doloremque.
-            </p>
+            <p className="mb-2 text-slate-900">{props.desc}</p>
             <button
                 className="px-4 py-2 mt-2 uppercase shadow-md text-white bg-blue-600 rounded hover:bg-blue-500"
                 onClick={() => push(`/${props.title}`)}
